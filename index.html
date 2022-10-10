@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <input type="number" name="num1" id="num1"> + - x %
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="calcular" onclick="somar()"><br>
+    <div id="res"></div><br>
+    <div id="res1"></div><br>
+    <div id="res2"></div><br>
+    <div id="res3"></div>
+    <script>
+        function somar() {
+            var num1 = window.document.getElementById("num1")
+            var num2 = window.document.getElementById("num2")
+            var res = window.document.getElementById("res")
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var resmais = n1 + n2
+            var resmenos = n1 - n2
+            var resdividido = n1 / n2
+            var resvezes = n1 * n2
+            res.innerHTML = `${n1} + ${n2} = ${resmais}`
+            res1.innerHTML = `${n1} - ${n2} = ${resmenos}`
+            res2.innerHTML = `${n1} %  ${n2} = ${resdividido}`
+            res3.innerHTML = `${n1} x  ${n2} = ${resvezes}`
+        }
+    </script>
+</body>
+
+</html>
