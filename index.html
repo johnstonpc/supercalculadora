@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pr-br">
 
 <head>
     <meta charset="UTF-8">
@@ -12,11 +12,13 @@
 <body>
     <input type="number" name="num1" id="num1" placeholder="digite um numero"> + - x %
     <input type="number" name="num2" id="num2" placeholder="digite outro numero">
-    <input type="button" value="calcular" onclick="somar()"><br>
-    <div id="res"></div><br>
-    <div id="res1"></div><br>
-    <div id="res2"></div><br>
-    <div id="res3"></div>
+    <input type="button" value="calcular" onclick="somar()">
+    <div id="aparecer">
+        <div id="res"></div><br>
+        <div id="res1"></div><br>
+        <div id="res2"></div><br>
+        <div id="res3"></div>
+    </div>
     <script>
         function somar() {
             var num1 = window.document.getElementById("num1")
@@ -32,6 +34,7 @@
             res1.innerHTML = `${n1} - ${n2} = ${resmenos}`
             res2.innerHTML = `${n1} %  ${n2} = ${resdividido}`
             res3.innerHTML = `${n1} x  ${n2} = ${resvezes}`
+            document.getElementById("aparecer").style.display = "block"
         }
     </script>
 </body>
