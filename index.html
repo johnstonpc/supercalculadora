@@ -14,7 +14,7 @@
     <input type="number" name="num2" id="num2" placeholder="digite outro numero">
     <input type="button" value="calcular" onclick="somar()">
     <div id="aparecer">
-        <div id="res"></div><br>
+        <div class="res"></div><br>
         <div id="res1"></div><br>
         <div id="res2"></div><br>
         <div id="res3"></div><br><br><br>
@@ -28,7 +28,7 @@
         function somar() {
             var num1 = window.document.getElementById("num1")
             var num2 = window.document.getElementById("num2")
-            var res = window.document.getElementById("res")
+            var res = window.document.querySelector(".res")
             var n1 = Number(num1.value)
             var n2 = Number(num2.value)
             var resmais = n1 + n2
